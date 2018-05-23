@@ -57,7 +57,7 @@ sync:
     - echo "${BOT_KEY}" | tr -d '\r' | ssh-add - >/dev/null
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - ssh-keyscan -t rsa gitlab.com >>~/.ssh/known_hosts
+    - ssh-keyscan -t rsa gitlab.com github.com >>~/.ssh/known_hosts
     - git config --global user.name "${BOT_USER}"
     - git config --global user.emal "${BOT_EMAIL}"
   script:
